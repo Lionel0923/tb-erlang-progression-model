@@ -1,6 +1,8 @@
 # tb-erlang-progression-model
+
 Mathematical model of tuberculosis progression comparing exponential and Erlang waiting-time assumptions, with applications to active case finding (ACF) interventions.
-# TB Erlang Progression Model
+
+---
 
 ## Overview
 
@@ -15,7 +17,7 @@ The framework is used to evaluate how structural assumptions about disease progr
 * Implementation of both **exponential** and **Erlang (multi-stage)** TB progression models
 * Bayesian calibration to epidemiological targets (India TB incidence)
 * Simulation of **active case finding (ACF)** interventions
-* Quantification of differences in projected incidence and cases averted
+* Model comparison using **WAIC** and **LOO-CV**
 * Reproducible pipeline for model fitting and forward projection
 
 ---
@@ -25,11 +27,9 @@ The framework is used to evaluate how structural assumptions about disease progr
 ```
 .
 ├── data/                  # Input epidemiological data
-├── src/                   # Model implementation and calibration
-├── scripts/               # Scripts to run analyses
+├── src/                   # MATLAB model and calibration code
 ├── results/               # Output figures and posterior samples
 ├── README.md
-└── requirements.txt
 ```
 
 ---
@@ -40,8 +40,8 @@ Epidemiological data used for calibration were obtained from:
 
 * World Health Organization (WHO) Global Tuberculosis Database
 
-These data are publicly available and can be accessed at:
-[https://worldhealthorg.shinyapps.io/tb_profiles/](https://worldhealthorg.shinyapps.io/tb_profiles/?_inputs_&tab=%22charts%22&lan=%22EN%22&iso3=%22IND%22&entity_type=%22country%22)
+Publicly available at:
+https://worldhealthorg.shinyapps.io/tb_profiles/
 
 ---
 
@@ -54,41 +54,53 @@ We construct a compartmental transmission model of TB with an explicit asymptoma
 
 The Erlang formulation preserves the same mean duration as the exponential model while modifying the shape of the dwell-time distribution, reducing the probability of unrealistically short durations.
 
-Model parameters are estimated using Bayesian calibration with an adaptive Metropolis algorithm. Annual TB incidence targets are matched using likelihood-based inference.
+Model parameters are estimated using Bayesian calibration with an adaptive Metropolis algorithm. Model comparison is conducted using WAIC and leave-one-out cross-validation (LOO-CV).
 
 ---
 
-## Reproducing Results
+## Reproducing Results (MATLAB)
 
-### 1. Install dependencies
+All analyses were conducted in MATLAB.
 
-```
-pip install -r requirements.txt
-```
+### 1. Simple model calibration
 
-### 2. Run calibration
+Run:
 
-```
-python src/calibration.py
-```
-
-### 3. Run forward simulation
-
-```
-python src/acf_simulation.py
+```matlab
+bayes_calibration_simple.m
+bayes_calibration_multi.m
 ```
 
-### 4. Generate figures
+### 2. Model comparison
 
+Compute WAIC and LOO-CV:
+
+```matlab
+model_evaluation_simple.m
+model_evaluation.m
 ```
-python scripts/plot_results.py
+
+### 3. Complex (Erlang) model calibration
+
+Run:
+
+```matlab
+complex_calibration.m
+```
+
+### 4. Forward projection and figures
+
+Run:
+
+```matlab
+forecast_baseline.m
 ```
 
 ---
 
 ## Code Availability
 
-All code used for model calibration, simulation, and analysis is provided in this repository.
+All MATLAB code used for model calibration, evaluation, and simulation is provided in this repository.
 
 ---
 
@@ -108,5 +120,4 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For questions, please contact:
 Zhichao Zhou

@@ -70,6 +70,41 @@ Run:
 bayes_calibration_simple.m
 bayes_calibration_multi.m
 ```
+## Model Components
+
+The modeling framework is organized into modular MATLAB functions:
+
+### ODE Models
+
+* `simpleTBmodel.m`
+  Implements the exponential (memoryless) TB progression model.
+
+* `erlangODE.m`
+  Implements the Erlang (multi-stage) progression model with (k) subclinical compartments.
+
+---
+
+
+### Likelihood Functions
+
+* `logPosterior.m`
+  Log-posterior for the Erlang model.
+
+* `logPosterior_simple.m`
+  Log-posterior for the exponential model.
+
+---
+
+### Diagnostics
+
+* `modelResidual.m`
+  Computes residuals between model predictions and observed data.
+
+---
+
+### Notes
+
+All functions are located in the `src/` directory and are automatically called by the main calibration scripts. No manual function linking is required.
 
 ### 2. Model comparison
 

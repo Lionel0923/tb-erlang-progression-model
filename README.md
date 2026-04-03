@@ -26,11 +26,21 @@ The framework is used to evaluate how structural assumptions about disease progr
 
 ```
 .
-├── data/                  # Input epidemiological data
-├── src/                   # MATLAB model and calibration code
-├── evaluation/            # Model comparison
-├── results/               # Output figures and posterior samples
-├── README.md
+├── data/
+│   ├── who_tb_data/
+│   └── nti_cohort/
+│
+├── src/
+│   ├── calibration/
+│   ├── evaluation/
+│   └── models/
+│
+├── results/
+│   ├── figures/
+│   ├── tables/
+│   └── logs/
+│
+└── README.md
 ```
 
 ---

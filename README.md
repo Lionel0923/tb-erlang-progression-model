@@ -50,12 +50,17 @@ The framework is used to evaluate how structural assumptions about disease progr
 
 ## Data Sources
 
-Epidemiological data used for calibration were obtained from:
+Epidemiological data used for calibration were obtained from the following sources:
 
-* World Health Organization (WHO) Global Tuberculosis Database
+* **World Health Organization (WHO) Global Tuberculosis Database**
+  Publicly available at:
+  https://worldhealthorg.shinyapps.io/tb_profiles/
 
-Publicly available at:
-https://worldhealthorg.shinyapps.io/tb_profiles/
+* **NTI cohort data**
+  Derived from published cohort studies of tuberculosis progression and/or publicly available datasets.
+  Where applicable, data were obtained from publicly accessible repositories ([e.g., GitHub](https://github.com/ERC-TBornotTB/Inf-Dis)) and processed for analysis.
+
+All data sources are publicly available or derived from previously published studies.
 
 ---
 

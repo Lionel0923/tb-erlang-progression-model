@@ -1,4 +1,4 @@
-# tb-erlang-progression-model
+# Tuberculosis-Gamma-progression-model
 
 Mathematical model of tuberculosis(TB) progression comparing exponential and Gamma-distributed waiting-time assumptions, with applications to active case finding (ACF) interventions.
 

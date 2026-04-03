@@ -1,20 +1,20 @@
 # tb-erlang-progression-model
 
-Mathematical model of tuberculosis progression comparing exponential and Erlang waiting-time assumptions, with applications to active case finding (ACF) interventions.
+Mathematical model of tuberculosis(TB) progression comparing exponential and Gamma-distributed waiting-time assumptions, with applications to active case finding (ACF) interventions.
 
 ---
 
 ## Overview
 
-This repository contains code and data to reproduce the analyses presented in our study on tuberculosis (TB) disease progression. We compare conventional exponential (memoryless) models with multi-stage Erlang formulations to better capture biologically realistic distributions of asymptomatic disease duration.
+This repository contains code and data to reproduce the analyses presented in our study on TB disease progression. We compare conventional exponential (memoryless) models with multi-stage Gamma-distributed formulations to better capture biologically realistic distributions of asymptomatic disease duration.
 
-The framework is used to evaluate how structural assumptions about disease progression influence long-term epidemiological projections and the estimated impact of active case finding (ACF) interventions.
+The framework is used to evaluate how structural assumptions about disease progression influence long-term epidemiological projections and the estimated impact of ACF interventions.
 
 ---
 
 ## Key Features
 
-* Implementation of both **exponential** and **Erlang (multi-stage)** TB progression models
+* Implementation of both **exponential** and **Gamma-distributed (multi-stage)** TB progression models
 * Bayesian calibration to epidemiological targets (India TB incidence)
 * Simulation of **active case finding (ACF)** interventions
 * Model comparison using **WAIC** and **LOO-CV**
@@ -71,7 +71,7 @@ We construct a compartmental transmission model of TB with an explicit asymptoma
 * **Exponential model**: assumes a memoryless progression process
 * **Erlang model**: represents progression as a sequence of (k) stages with identical transition rates
 
-The Erlang formulation preserves the same mean duration as the exponential model while modifying the shape of the dwell-time distribution, reducing the probability of unrealistically short durations.
+The Gamma-distributed formulation preserves the same mean duration as the exponential model while modifying the shape of the dwell-time distribution, reducing the probability of unrealistically short durations.
 
 Model parameters are estimated using Bayesian calibration with an adaptive Metropolis algorithm. Model comparison is conducted using WAIC and leave-one-out cross-validation (LOO-CV).
 

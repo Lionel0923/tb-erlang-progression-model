@@ -24,7 +24,6 @@ The framework is used to evaluate how structural assumptions about disease progr
 
 ## Repository Structure
 
-```
 .
 ├── data/
 │   ├── who_data/
@@ -33,16 +32,19 @@ The framework is used to evaluate how structural assumptions about disease progr
 ├── src/
 │   ├── calibration/
 │   ├── evaluation/
-│   └── models/
+│   ├── models/
 │   └── visualization/
 │
 ├── results/
 │   ├── figures/
 │   ├── tables/
 │   └── logs/
+│       ├── acf_sensitivity/       
+│       └── calibration/
+│           ├── India/
+│           └── nti/
 │
 └── README.md
-```
 
 ---
 

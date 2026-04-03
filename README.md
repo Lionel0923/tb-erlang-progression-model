@@ -36,13 +36,12 @@ The framework is used to evaluate how structural assumptions about disease progr
 │   └── visualization/
 │
 ├── results/
-│   ├── figures/
-│   ├── tables/
-│   └── logs/
-│       ├── acf_sensitivity/       
-│       └── calibration/
-│           ├── India/
-│           └── nti/
+│   ├── figures/                
+│   ├── logs/                    
+│   │   ├── India/
+│   │   └── nti/
+│   ├── distribution_comparison/ 
+│   └── sensitivity_analysis/    
 │
 └── README.md
 ```

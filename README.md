@@ -27,8 +27,8 @@ The framework is used to evaluate how structural assumptions about disease progr
 ```
 .
 ├── data/
-│   ├── who_tb_data/
-│   └── nti_cohort/
+│   ├── who_data/
+│   └── nti_cohort_data/
 │
 ├── src/
 │   ├── calibration/

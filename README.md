@@ -99,7 +99,7 @@ The modeling framework is organized into modular MATLAB functions:
   Implements the exponential (memoryless) TB progression model.
 
 * `erlangODE.m`
-  Implements the Erlang (multi-stage) progression model with (k) subclinical compartments.
+  Implements the Gamma-distributed (multi-stage) progression model with (k) subclinical compartments.
 
 ---
 
@@ -107,10 +107,10 @@ The modeling framework is organized into modular MATLAB functions:
 ### Likelihood Functions
 
 * `logPosterior.m`
-  Log-posterior for the Erlang model.
+  Log-posterior for the Gamma-distributed model.
 
 * `logPosterior_simple.m`
-  Log-posterior for the exponential model.
+  Log-posterior for the simple(exponential) model.
 
 ---
 
@@ -147,7 +147,10 @@ complex_calibration.m
 Run:
 
 ```matlab
-testbaseUI.m
+UI.m
+IndianPrediction_2trajectory.m
+IndianPrediction_data_full.m
+IndianPrediction_efsimple.m
 ```
 
 ---
@@ -158,13 +161,6 @@ All MATLAB code used for model calibration, evaluation, and simulation is provid
 
 ---
 
-## Citation
-
-If you use this code or build upon this work, please cite:
-
-*Author(s). Title. Journal (Year).*
-
----
 
 ## License
 

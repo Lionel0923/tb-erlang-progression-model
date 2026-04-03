@@ -134,7 +134,7 @@ model_evaluation_simple.m
 model_evaluation.m
 ```
 
-### 3. Complex (Erlang) model calibration
+### 3. Complex (Extended) model calibration
 
 Run:
 
